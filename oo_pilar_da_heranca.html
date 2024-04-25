@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        
+        class Animal{
+            constructor(){
+                this.cor = ''
+                this.tamanho = null  
+                this.peso= '30kg'
+            }
+
+            dormir(){
+                console.log('Dormir ')
+            }
+        }
+
+
+        class Cachorro extends Animal{
+            constructor(){
+                // this.cor = 'Branco e marrom'
+                // this.tamanho = 30  -> foram atribuidas na classe animal   
+                super()
+                this.orelhas = 'Grandes e caídas'
+            }
+        
+            correr(){
+                console.log('Correr')
+            }
+            // dormir(){  -> foi atribuido na classe pai
+            //     console.log('Dormir')
+            // }
+            rosnar(){
+                console.log('Rosnar')
+            }
+        }
+        class Passaro extends Animal{
+            constructor(){
+                // this.cor ='Branco e marrom'
+                // this.tamanho= 10  -> foram atribuidas na classe animal    
+                super()
+                this.bico ='Curto'
+            }
+        
+            voar(){
+                console.log('Voar')
+            }    
+            // dormir(){ -> foi atribuido na classe pai
+            //     console.log('dormir')
+            // }      
+
+        }
+
+
+        class Papagaio extends Passaro{
+            constructor(){
+              
+                super()
+                this.bico ='Médio'
+                this.sabeFala = true
+                
+            }
+        
+            falar(){
+                console.log('Falar')
+            }    
+           
+        }
+
+        let cachorro = new Cachorro()
+        let passaro = new Passaro()
+        let papagaio = new Papagaio()
+
+        // console.log('Cachorro: ')
+        // cachorro.dormir()
+        // console.log('Passaro: ')
+        // passaro.dormir()
+        // console.log('Papagaio: ')
+        // papagaio.dormir()
+        // papagaio.voar()
+        // papagaio.falar()
+
+        console.log(cachorro.peso)
+       console.log( passaro.peso )
+        console.log(papagaio.peso)
+        
+        
+        
+    </script>
+</head>
+
+<body style="background-color: #ffe2a5b7;">
+    <div id="output" ></div>
+</body>
+
+</html>
